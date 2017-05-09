@@ -7,7 +7,7 @@
 //
 
 #import "LCStretchableHeaderViewController.h"
-#import <UINavigationBar+Awesome.h>
+#import <LTNavigationBar/UINavigationBar+Awesome.h>
 
 #define NAVBAR_CHANGE_POINT 32
 #define NAVBAR_HEIGHT       64
