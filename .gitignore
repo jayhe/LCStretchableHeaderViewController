@@ -1,0 +1,7 @@
+LCStretchableHeaderViewController.xcodeproj/xcuserdata/
+LCStretchableHeaderViewController.xcworkspace/
+Pods/
+*.swp
+Podfile.lock
+.DS_Store
+LCStretchableHeaderViewController.xcodeproj/project.xcworkspace/xcuserdata/
