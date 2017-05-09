@@ -8,22 +8,108 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+#pragma mark - Life Cycle
+
+
+- (void)dealloc
+{
+    NSLog(@"%s",__FUNCTION__);
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    [self setupUI];
+}
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - Action
+
+
+
+#pragma mark - Http
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 15;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return .01f;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return .01f;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CELL_ID"];
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CELL_ID"];
+    }
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+    
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - Private Methods
+
+
+#pragma mark - UI
+
+- (void)setupUI
+{
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"DEMO";
+    self.navBarNormalColor = [UIColor blueColor];
+    self.ignoredTopOffset = 200;
+    
+    //add subview
+    self.headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
+    self.headerView.backgroundColor = [UIColor redColor];
+    //set frame
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) style:UITableViewStyleGrouped];
+    tableView.rowHeight = 88;
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    self.containerView = tableView;
+}
+
+#pragma mark - Getter && Setter
+
+
+
 
 
 @end

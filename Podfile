@@ -3,10 +3,11 @@
 
 source 'https://github.com/CocoaPods/Specs.git'
 #Private Pods should be changed to yours
-source 'https://github.com/DamonHC/PrivatePods.git'
 
 target 'LCStretchableHeaderViewController' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
+  pod 'LTNavigationBar', '2.1.9'
+  
  
 end

@@ -7,25 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ED4C7208B73AB0E6E2C07E8 /* libPods-LCStretchableHeaderViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCE49342D0134FC822B33D2 /* libPods-LCStretchableHeaderViewController.a */; };
 		106DD1BF1EC1728800962EB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 106DD1BE1EC1728800962EB8 /* main.m */; };
 		106DD1C21EC1728800962EB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 106DD1C11EC1728800962EB8 /* AppDelegate.m */; };
 		106DD1C51EC1728800962EB8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106DD1C41EC1728800962EB8 /* ViewController.m */; };
-		106DD1C81EC1728800962EB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106DD1C61EC1728800962EB8 /* Main.storyboard */; };
 		106DD1CA1EC1728800962EB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 106DD1C91EC1728800962EB8 /* Assets.xcassets */; };
 		106DD1CD1EC1728800962EB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106DD1CB1EC1728800962EB8 /* LaunchScreen.storyboard */; };
+		106DD1D71EC1751400962EB8 /* LCStretchableHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106DD1D61EC1751400962EB8 /* LCStretchableHeaderViewController.m */; };
+		106DD1DA1EC177D400962EB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 106DD1D91EC177D400962EB8 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CCE49342D0134FC822B33D2 /* libPods-LCStretchableHeaderViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCStretchableHeaderViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		106DD1BA1EC1728800962EB8 /* LCStretchableHeaderViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCStretchableHeaderViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		106DD1BE1EC1728800962EB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		106DD1C01EC1728800962EB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		106DD1C11EC1728800962EB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		106DD1C31EC1728800962EB8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		106DD1C41EC1728800962EB8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		106DD1C71EC1728800962EB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		106DD1C91EC1728800962EB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		106DD1CC1EC1728800962EB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		106DD1CE1EC1728800962EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		106DD1D51EC1751400962EB8 /* LCStretchableHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCStretchableHeaderViewController.h; sourceTree = "<group>"; };
+		106DD1D61EC1751400962EB8 /* LCStretchableHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCStretchableHeaderViewController.m; sourceTree = "<group>"; };
+		106DD1D91EC177D400962EB8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		23EFAB2D203538D0D76F6D13 /* Pods-LCStretchableHeaderViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCStretchableHeaderViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCStretchableHeaderViewController/Pods-LCStretchableHeaderViewController.release.xcconfig"; sourceTree = "<group>"; };
+		9F86DB87BAF457FF5280586C /* Pods-LCStretchableHeaderViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCStretchableHeaderViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCStretchableHeaderViewController/Pods-LCStretchableHeaderViewController.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				106DD1DA1EC177D400962EB8 /* CoreGraphics.framework in Frameworks */,
+				0ED4C7208B73AB0E6E2C07E8 /* libPods-LCStretchableHeaderViewController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +53,8 @@
 			children = (
 				106DD1BC1EC1728800962EB8 /* LCStretchableHeaderViewController */,
 				106DD1BB1EC1728800962EB8 /* Products */,
+				106DD1D81EC177D400962EB8 /* Frameworks */,
+				AB74A769B530E69ABE1D6F1F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,11 +69,11 @@
 		106DD1BC1EC1728800962EB8 /* LCStretchableHeaderViewController */ = {
 			isa = PBXGroup;
 			children = (
+				106DD1D41EC174FA00962EB8 /* LCStretchableHeaderViewController */,
 				106DD1C01EC1728800962EB8 /* AppDelegate.h */,
 				106DD1C11EC1728800962EB8 /* AppDelegate.m */,
 				106DD1C31EC1728800962EB8 /* ViewController.h */,
 				106DD1C41EC1728800962EB8 /* ViewController.m */,
-				106DD1C61EC1728800962EB8 /* Main.storyboard */,
 				106DD1C91EC1728800962EB8 /* Assets.xcassets */,
 				106DD1CB1EC1728800962EB8 /* LaunchScreen.storyboard */,
 				106DD1CE1EC1728800962EB8 /* Info.plist */,
@@ -79,6 +90,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		106DD1D41EC174FA00962EB8 /* LCStretchableHeaderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				106DD1D51EC1751400962EB8 /* LCStretchableHeaderViewController.h */,
+				106DD1D61EC1751400962EB8 /* LCStretchableHeaderViewController.m */,
+			);
+			path = LCStretchableHeaderViewController;
+			sourceTree = "<group>";
+		};
+		106DD1D81EC177D400962EB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				106DD1D91EC177D400962EB8 /* CoreGraphics.framework */,
+				0CCE49342D0134FC822B33D2 /* libPods-LCStretchableHeaderViewController.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB74A769B530E69ABE1D6F1F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F86DB87BAF457FF5280586C /* Pods-LCStretchableHeaderViewController.debug.xcconfig */,
+				23EFAB2D203538D0D76F6D13 /* Pods-LCStretchableHeaderViewController.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +124,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 106DD1D11EC1728800962EB8 /* Build configuration list for PBXNativeTarget "LCStretchableHeaderViewController" */;
 			buildPhases = (
+				36F1A785BEB2A84A776268F2 /* [CP] Check Pods Manifest.lock */,
 				106DD1B61EC1728800962EB8 /* Sources */,
 				106DD1B71EC1728800962EB8 /* Frameworks */,
 				106DD1B81EC1728800962EB8 /* Resources */,
+				37E6730D2D4DF536A64B8B2D /* [CP] Embed Pods Frameworks */,
+				26245B44D22D1CB6542E4B3F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,11 +181,58 @@
 			files = (
 				106DD1CD1EC1728800962EB8 /* LaunchScreen.storyboard in Resources */,
 				106DD1CA1EC1728800962EB8 /* Assets.xcassets in Resources */,
-				106DD1C81EC1728800962EB8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26245B44D22D1CB6542E4B3F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCStretchableHeaderViewController/Pods-LCStretchableHeaderViewController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36F1A785BEB2A84A776268F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		37E6730D2D4DF536A64B8B2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCStretchableHeaderViewController/Pods-LCStretchableHeaderViewController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		106DD1B61EC1728800962EB8 /* Sources */ = {
@@ -153,6 +241,7 @@
 			files = (
 				106DD1C51EC1728800962EB8 /* ViewController.m in Sources */,
 				106DD1C21EC1728800962EB8 /* AppDelegate.m in Sources */,
+				106DD1D71EC1751400962EB8 /* LCStretchableHeaderViewController.m in Sources */,
 				106DD1BF1EC1728800962EB8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,14 +249,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		106DD1C61EC1728800962EB8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				106DD1C71EC1728800962EB8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		106DD1CB1EC1728800962EB8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -269,6 +350,7 @@
 		};
 		106DD1D21EC1728800962EB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F86DB87BAF457FF5280586C /* Pods-LCStretchableHeaderViewController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
@@ -281,6 +363,7 @@
 		};
 		106DD1D31EC1728800962EB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23EFAB2D203538D0D76F6D13 /* Pods-LCStretchableHeaderViewController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;

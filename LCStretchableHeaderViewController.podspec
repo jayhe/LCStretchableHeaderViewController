@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LCStretchableHeaderViewController"
-  s.version      = "1"
+  s.version       = "1.0.0"
   s.summary      = "LCStretchableHeaderViewController."
 
   # This description is used to generate tags and improve search results.
@@ -117,8 +117,8 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
-
+  s.frameworks = "CoreGraphics"
+ 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
 
@@ -132,8 +132,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "BLNetworking"
-  # s.dependency "BLAPIManagers"
-  # s.dependency "BLMediator"
+  s.dependency "LTNavigationBar"
 
 end

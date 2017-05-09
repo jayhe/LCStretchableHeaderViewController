@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LCStretchableHeaderViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : LCStretchableHeaderViewController
 
 
 @end
