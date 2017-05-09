@@ -137,7 +137,7 @@
         [_containerView removeFromSuperview];
     }
 #if DEBUG
-    NSAssert((_containerView == nil || ![_containerView isKindOfClass:[UIScrollView class]]), @"illegal containerView");
+    NSAssert((_containerView && [_containerView isKindOfClass:[UIScrollView class]]), @"illegal containerView");
 #endif
     _containerView = containerView;
     [self.view addSubview:_containerView];
