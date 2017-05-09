@@ -98,6 +98,10 @@
 
 - (void)layoutContainerView
 {
+    if (![self.containerView isKindOfClass:[UIScrollView class]])
+    {
+        return;
+    }
     self.containerView.contentInset = UIEdgeInsetsMake(self.headerHeight, 0, 0, 0);
     self.containerView.contentOffset = CGPointMake(0, -self.headerHeight);
 }
@@ -137,7 +141,7 @@
         [_containerView removeFromSuperview];
     }
 #if DEBUG
-    NSAssert((_containerView && [_containerView isKindOfClass:[UIScrollView class]]), @"illegal containerView");
+    NSAssert(([containerView isKindOfClass:[UIScrollView class]]), @"illegal containerView");
 #endif
     _containerView = containerView;
     [self.view addSubview:_containerView];
