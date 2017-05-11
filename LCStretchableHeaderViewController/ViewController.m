@@ -92,7 +92,7 @@
 {
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"DEMO";
-    self.navBarNormalColor = [UIColor blueColor];
+    self.navBarNormalColor = [UIColor greenColor];
     self.ignoredTopOffset = 200;
     
     //add subview
