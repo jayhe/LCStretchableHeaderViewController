@@ -9,7 +9,7 @@
 #import "LCStretchableHeaderViewController.h"
 #import <LTNavigationBar/UINavigationBar+Awesome.h>
 
-#define NAVBAR_CHANGE_POINT 32
+#define NAVBAR_CHANGE_POINT 50
 #define NAVBAR_HEIGHT       64
 #define UNSET_VALUE         (-1)
 
@@ -83,13 +83,24 @@
     //shade nav bar
     if (self.isGradientNavBar)
     {
+        static BOOL isNormal = NO;
         if (offsetY + self.ignoredTopOffset > NAVBAR_CHANGE_POINT)
         {
             CGFloat alpha = MIN(1, 1 - ((NAVBAR_CHANGE_POINT + NAVBAR_HEIGHT - (offsetY + self.ignoredTopOffset)) / NAVBAR_HEIGHT));
             [self.navigationController.navigationBar lt_setBackgroundColor:[self.navBarNormalColor colorWithAlphaComponent:alpha]];
+            if (!isNormal && self.delegate && [self.delegate respondsToSelector:@selector(lc_navgigationBarStateChanged:)])
+            {
+                [self.delegate lc_navgigationBarStateChanged:LCNavigationBarStateNormal];
+                isNormal = YES;
+            }
         }else
         {
             [self.navigationController.navigationBar lt_setBackgroundColor:[self.navBarNormalColor colorWithAlphaComponent:0]];
+            if (isNormal && self.delegate && [self.delegate respondsToSelector:@selector(lc_navgigationBarStateChanged:)])
+            {
+                [self.delegate lc_navgigationBarStateChanged:LCNavigationBarStateTransparent];
+                isNormal = NO;
+            }
         }
     }
 }

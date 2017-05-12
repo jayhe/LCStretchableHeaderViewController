@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, LCNavigationBarDelegate>
 
 @end
 
@@ -83,6 +83,24 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+#pragma mark - LCNavigationBarDelegate
+
+- (void)lc_navgigationBarStateChanged:(LCNavigationBarState)barState
+{
+    NSLog(@"state = %ld", barState);
+    if (barState == LCNavigationBarStateTransparent)
+    {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Transparent" style:UIBarButtonItemStylePlain target:nil action:nil];
+        [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
+        [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    }else
+    {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Normal" style:UIBarButtonItemStylePlain target:nil action:nil];
+        [self.navigationItem.rightBarButtonItem setTintColor:[UIColor blackColor]];
+        [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
+    }
+}
+
 #pragma mark - Private Methods
 
 
@@ -92,8 +110,12 @@
 {
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"DEMO";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Transparent" style:UIBarButtonItemStylePlain target:nil action:nil];
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     self.navBarNormalColor = [UIColor greenColor];
     self.ignoredTopOffset = 200;
+    self.delegate = self;
     
     //add subview
     self.headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
